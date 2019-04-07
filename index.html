@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Contobox</title>
+  </head>
+  <body>
+    <div id="a" class="container">
+      <div class="rollOver">
+        <img src="/img/DVD.png" alt="DVD" class="dvd" />
+        <img src="/img/Snipes.png" alt="Snipes" class="snipes" />
+        <img src="/img/ubisoft1.png" alt="Ubisoft" class="ubisoft" />
+        <img src="/img/Pre-Order.png" alt="Pre-Order" class="pre-order" />
+        <img src="/img/NOW.png" alt="Now " class="now" />
+        <img src="/img/AVAILABLE.png" alt="Available" class="available" />
+        <img src="/img/rollover.png" alt="Rollover" class="rollover" />
+      </div>
+    </div>
+    <div id="b" class="hide">
+      <div class="expanded">
+        <img src="/img/watch_dogs.png" alt="watch dogs" class="watchdogs" />
+        <img src="/img/CLOSE.png" alt="close" class="close" />
+        <img src="/img/may27.png" alt="may 27" class="may27" />
+        <img
+          src="/img/available_small.png"
+          alt="available"
+          class="available2"
+        />
+        <img src="/img/now-960x600.png" alt="now" class="now2" />
+        <img
+          src="/img/PRE-ORDER-960x600.png"
+          alt="pre-order"
+          class="pre-order2"
+        />
+        <img
+          src="/img/_Pre-Order_960x600.png"
+          alt="pre-order"
+          class="_pre-order2"
+        />
+        <img src="/img/social.png" alt="social media" class="social" />
+        <img src="/img/DVD-960x600.png" alt="dvd" class="dvd2" />
+        <img src="/img/lozange.png" alt="" class="lozange" />
+        <img src="/img/menu.png" alt="menu" class="menu" />
+        <img src="/img/Snipes-960x600.png" alt="snipes" class="snipes2" />
+      </div>
+    </div>
+  </body>
+  <script>
+    var banner = document.getElementById("a");
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    var time;
+
+    //trying to restart CSS Animation
+
+    // var watchdogs = document.getElementsByClassName("watchdogs");
+    // watchdogs[0].classList.add("new");
+    // console.log(typeof watchdogs[0].classList);
+
+    // document
+    //   .getElementsByClassName("expanded")[0]
+    //   .children[0].classList.add("transit");
+
+    banner.addEventListener("mouseenter", function() {
+      time = setTimeout(expand, 2000);
+    });
+
+    banner.addEventListener("mouseleave", function() {
+      clearTimeout(time);
+    });
+
+    closeBtn.addEventListener("click", function() {
+      document.getElementsByClassName("hide")[0].className = "container";
+      document.getElementsByClassName("expandable")[0].className = "hide";
+    });
+
+    function expand() {
+      document.getElementsByClassName("hide")[0].className = "expandable";
+      document.getElementsByClassName("container")[0].className = "hide";
+      //trying something
+      var childrenExpanded = Array.from(
+        document.getElementsByClassName("expanded")[0].children
+      );
+      childrenExpanded.forEach(e => {
+        let classname = e.className;
+        e.classList.remove(classname);
+        void e.offsetWidth;
+        e.classList.add(classname);
+      });
+      console.log(childrenExpanded);
+    }
+  </script>
+</html>

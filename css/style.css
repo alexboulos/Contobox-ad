@@ -1,0 +1,315 @@
+/* BANNER */
+
+.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.container {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+}
+
+.container:hover {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.rollOver {
+  height: 250px;
+  width: 300px;
+  background-image: url(../img/background1.png);
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.snipes {
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  animation-name: snipe;
+  animation-delay: 0.7s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+.dvd {
+  z-index: 1;
+  position: absolute;
+  margin-top: -212px;
+  animation-name: drop-dvd;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+
+.ubisoft {
+  z-index: 2;
+  position: absolute;
+  margin-top: 320px;
+  margin-left: 20px;
+  animation-name: drop-ubisoft;
+  animation-delay: 1.4s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+
+.pre-order {
+  z-index: 2;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 60px;
+  animation-name: pre-order;
+  animation-delay: 2s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: initial;
+}
+
+.now {
+  z-index: 2;
+  position: absolute;
+  margin-top: 81px;
+  margin-left: 300px;
+  animation-name: now;
+  animation-delay: 2.3s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: initial;
+}
+
+.available {
+  z-index: 2;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 130px;
+  animation-name: now;
+  animation-delay: 3.3s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+
+.rollover {
+  z-index: 2;
+  position: absolute;
+  margin-left: 153px;
+  margin-top: 160px;
+  opacity: 0;
+  animation-name: rollover;
+  animation-delay: 4s;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes drop-dvd {
+  from {
+    margin-top: -212px;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+@keyframes drop-ubisoft {
+  from {
+    margin-top: 300px;
+  }
+  to {
+    margin-top: 220px;
+  }
+}
+
+@keyframes snipe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes pre-order {
+  from {
+    margin-left: 300px;
+  }
+  to {
+    margin-left: 140px;
+  }
+}
+
+@keyframes now {
+  from {
+    margin-left: 300px;
+  }
+  to {
+    margin-left: 153px;
+  }
+}
+
+@keyframes rollover {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 100;
+    filter: blur(0);
+  }
+}
+
+/*  EXPANDABLE  */
+
+.expandable {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  background: rgba(0.9, 0.9, 0.9, 0.7);
+}
+
+.expanded {
+  height: 600px;
+  width: 960px;
+  background-image: url(../img/Background-960x600.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin: 5% auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.watchdogs {
+  position: absolute;
+  z-index: 2;
+  margin-top: 30px;
+  margin-left: 30px;
+  opacity: 0;
+  animation-name: rollover;
+  animation-delay: 5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.close {
+  position: absolute;
+  z-index: 2;
+  margin-top: 30px;
+  margin-left: 890px;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.may27 {
+  position: absolute;
+  visibility: hidden;
+}
+
+.available2 {
+  position: absolute;
+  visibility: hidden;
+}
+
+.now2 {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 50px;
+  opacity: 0;
+  animation-name: rollover;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.pre-order2 {
+  position: absolute;
+  margin-top: 520px;
+  margin-left: 750px;
+  opacity: 0;
+  animation-name: rollover;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+._pre-order2 {
+  position: absolute;
+  z-index: 2;
+  margin-top: 100px;
+  margin-left: -350px;
+  animation-name: _pre-order2;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.social {
+  position: absolute;
+  margin-top: 550px;
+  margin-left: 320px;
+  z-index: 2;
+}
+
+.dvd2 {
+  z-index: 1;
+  position: absolute;
+  margin-top: -650px;
+  margin-left: -300px;
+  animation-name: drop-dvd2;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+
+.lozange {
+  position: absolute;
+  visibility: hidden;
+}
+
+.menu {
+  position: absolute;
+  z-index: 2;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.snipes2 {
+  position: absolute;
+  opacity: 0;
+  animation-name: rollover;
+  animation-delay: 0s;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+}
+
+@keyframes drop-dvd2 {
+  from {
+    margin-top: -650px;
+    margin-left: -300px;
+  }
+  to {
+    margin-top: 65px;
+    margin-left: 30px;
+  }
+}
+
+@keyframes _pre-order2 {
+  from {
+    margin-left: -350px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
